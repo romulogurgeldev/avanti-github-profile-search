@@ -1,54 +1,85 @@
-# React + TypeScript + Vite
+# GitHub Profile Search App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto permite que os usuários busquem perfis do GitHub usando o nome de usuário e exibam informações relevantes, como nome, avatar e bio. Ele foi desenvolvido com React e implementa funcionalidades de alternância entre modo escuro e claro, além de elementos decorativos.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Busca de perfil do GitHub**: Digite um nome de usuário do GitHub e veja as informações associadas a esse perfil.
+- **Modo escuro e claro**: Alterna entre o modo escuro e claro para melhorar a experiência do usuário.
+- **Elementos decorativos**: Imagens decorativas (camada e elipses) são usadas para dar um toque visual ao layout.
+- **Feedback de erro e carregamento**: O sistema exibe um indicador de carregamento enquanto os dados são recuperados e uma mensagem de erro caso o usuário não seja encontrado.
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React**: Biblioteca para construir interfaces de usuário.
+- **Tailwind CSS**: Framework de utilitários CSS para design responsivo.
+- **React Icons**: Pacote de ícones para React, usado para o botão de alternância de tema.
+- **GitHub API**: A API do GitHub é utilizada para buscar dados do perfil do usuário.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Como Usar
+
+### Pré-requisitos
+
+Certifique-se de ter o Node.js instalado em sua máquina. Caso não tenha, você pode baixá-lo de [nodejs.org](https://nodejs.org/).
+
+### Instalação
+
+1. Clone este repositório:
+
+```bash
+git clone https://github.com/seu-usuario/github-profile-search.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Navegue até o diretório do projeto:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+cd github-profile-search
 ```
+
+3. Instale as dependências:
+
+```bash
+npm install
+```
+
+4. Inicie o servidor de desenvolvimento:
+
+```bash
+npm start
+```
+
+5. Acesse o aplicativo em seu navegador, geralmente disponível em [http://localhost:3000](http://localhost:3000).
+
+### Alternando entre os modos
+
+Clique no ícone de sol/lua no canto superior direito para alternar entre o modo escuro e claro.
+
+## Contribuições
+
+Sinta-se à vontade para abrir problemas ou pull requests. Caso queira contribuir, basta seguir as etapas:
+
+1. Faça um fork do repositório.
+2. Crie uma branch para a sua feature:
+
+```bash
+git checkout -b minha-feature
+```
+
+3. Realize suas mudanças.
+4. Commit suas alterações:
+
+```bash
+git commit -m "feat: descrição da sua feature"
+```
+
+5. Envie suas alterações para o repositório remoto:
+
+```bash
+git push origin minha-feature
+```
+
+6. Abra um pull request.
+
+## Licença
+
+Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
